@@ -1,0 +1,19 @@
+﻿@model CompanyCreateVM
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+
+    <label asp-for="CompanyName"></label>
+    <input asp-for="CompanyName" />
+    <span asp-validation-for="CompanyName"></span> <br />
+
+    <input type="submit" value="Create" />
+</form>
+@section validationScripts
+    {
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+}
